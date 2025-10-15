@@ -32,7 +32,7 @@ console.log(typeof name);
 //concatenation
 console.log('my name is' +name + 'and i am ' +age) ; 
 // tempakate strings
-const  hello = `My name is ${name} and i am ${age};
+const  hello = `My name is ${name} and i am ${age}`;
 
     console.log(hello);
 cosnt s = 'hello world!'; 
