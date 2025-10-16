@@ -2,14 +2,14 @@ AudioListener(`hello world`);
 
 console.log(`hello world`);
 console.error(`this is an error`);
-console.warn(`this is a warning0`):
+console.warn(`this is a warning0`);
 
 // let, const
 
 const age = 30;
 age=31;
 
-console log(age);
+console.log(age);
 
 let score; 
 
@@ -20,22 +20,22 @@ console. log(socre);
 // strings, numbers, booleqans, null, undefined
 
 const name = `john`;
-const age = 30;
+const personAge = 30;
 const isCool = true; 
 const rating = 4.5;
-const x = null; 
+const nullValue = null; 
 const y = undefined; 
 let z; 
 
 console.log(typeof name);
 
 //concatenation
-console.log('my name is' +name + 'and i am ' +age) ; 
+console.log('my name is' +name + 'and i am ' + personAge) ; 
 // tempakate strings
-const  hello = `My name is ${name} and i am ${age}`;
+const  hello = `My name is ${name} and i am ${personAge}`;
 
     console.log(hello);
-cosnt s = 'hello world!'; 
+const s = 'hello world!'; 
 
 console.log(s.substring(0,5). toUpperCase());
 
@@ -83,33 +83,29 @@ console.log(person.hobbies[1]);
 console.log(person.address.city);
 
 
-const { firstName, lastName, address: { city } } = person;
+const { firstName: fName, lastName: lName, address: { city } } = person;
 
-console.log(firstName, city);
+console.log(fName, city);
 person.email = ''; 
 console.log(person);
 
 const todos = [
 {
     id: 1,
-    text:  'Take out trash',
+    text: 'Take out trash',
     isCompleted: true
-     }
-]; 
-const todos = [
+},
 {
     id: 2,
-    text:  'Meeting with boss',
+    text: 'Meeting with boss',
     isCompleted: true
-     }
-]; 
-const todos = [
+},
 {
-    id: 1,
-    text:  'Dentist appt',
+    id: 3,
+    text: 'Dentist appt',
     isCompleted: true
-     }
-]; 
+}
+];
 
 const todoJSON = JSON.stringify(todos); 
 console.log(todoJSON);
@@ -121,7 +117,7 @@ for(let i = 0; i < todos.length; i++) {
 
 // While
 let i = 0;
-while(1 <10) {
+while(1 <10)
     console.log(`While Loop Number: ${i}`);
     i++;   
 for(let todo of todo){
@@ -130,19 +126,19 @@ for(let todo of todo){
 
 // forEach, map, filter
 todos.forEach(function(todo){
- console.log(todo.text);
- const todoText = todos.map(function(todo)
- return todo.text;
- .map(function(todo) {
- return todo.text;
-};
+    console.log(todo.text);
+});
+
+const todoText = todos.map(function(todo) {
+    return todo.text;
+});
 
 console.log(todoText);
 
 
-const x = 4;
-const y = 10;
-if(x > 5) {
+const num1 = 4;
+const y2 = 10;
+if(num1 > 5) {
     console.log('x is 10');
 } else if (x > 10) {
     console.log('x is greater than 10');
@@ -153,12 +149,12 @@ if(x > 5) {
     const x= 10;
     const color = x > 10 ? 'red' : 'blue';
 
-    switch(color) 
+    switch(color) {
     case 'red':
         console.log('color is red');
         break;
     case 'blue':
-        cold console.log('color is blue');
+        console.log('color is blue');
         break;
     default:
         console.log('color is not red or blue');
@@ -183,7 +179,7 @@ this.getBirthYear = function() {
 }
 
 //class
-clss Person {
+class Person{
     constructor(firstName, lastName, dob) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -195,18 +191,14 @@ clss Person {
     getFullName() {
         return `${this.firstName} ${this.lastName}`;
     }
-
-
-// Instantiate object
-cosnt person1= new Person('John', 'Doe', '4-3-1980');
-cosnt person2= new Person('Mary', 'Smith', '3-6-1970'); 
-
-console.log(person1.getBirthYear);
-person.protoype.getFullName = function() {
-    return `${this.firstName} ${this.lastName}`;
 }
-    prototype.getFullName = function() {
-    return `${this.firstName} ${this.lastName}`;
+
+// Instantiate objects
+let person1 = new Person('John', 'Doe', '4-3-1980');
+let person2 = new Person('Mary', 'Smith', '3-6-1970');
+
+console.log(person1.getBirthYear());
+console.log(person1.getFullName());
 
 //single element
 console.log(document.getElementById('my-form'));
@@ -234,16 +226,16 @@ u
 const btn = document.querySelector('.btn');
 btn.style.background = 'red';
 
-cnst btn = document.querySelector('.btn');
+const btn = document.querySelector('.btn');
 btn.addEventListener('click', (e) => {
     e.preventDefault();
     console.log(e.target.className);
     document.querySelector('#my-form').style.background = '#ccc';
     document.querySelector('body').classList.add('bg-dark');
     document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>';
-    };
+});
 
-    cosnt myForm = document.querySelector('#my-form');
+    const myForm = document.querySelector('#my-form');
     const nameInput = document.querySelector('#name');
     const emailInput = document.querySelector('#email');
     const msg = document.querySelector('.msg');
